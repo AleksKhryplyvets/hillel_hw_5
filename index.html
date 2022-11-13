@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hw-5</title>
+  </head>
+  <body>
+    <script>
+      const userName = prompt("Whar is your name?");
+      const userNumber = prompt("Whar is your faivorite number?");
+      const userSymbol = prompt("Whar is your faivorite symbol?");
+
+      function padString(name, length, symbol) {
+        let result = "";
+        if (name.length === length) {
+          return name;
+        } else {
+          const lastLength = length - name.length;
+          for (let i = 0; i < lastLength; i++) {
+            result += symbol;
+          }
+        }
+        return name + result;
+      }
+
+      console.log(padString(userName, userNumber, userSymbol));
+    </script>
+  </body>
+</html>
