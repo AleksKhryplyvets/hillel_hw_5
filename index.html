@@ -22,10 +22,10 @@
           const lastLength = length - name.length;
           for (let i = 0; i < lastLength; i++) {
             result += symbol;
-            if (userSide === "left") {
-              return result + name;
-            }
           }
+        }
+        if (userSide === "left") {
+          return result + name;
         }
         return name + result;
       }
