@@ -11,15 +11,20 @@
       const userName = prompt("Whar is your name?");
       const userNumber = prompt("Whar is your faivorite number?");
       const userSymbol = prompt("Whar is your faivorite symbol?");
+      const userSide = prompt("which side will you choose?");
 
       function padString(name, length, symbol) {
         let result = "";
+
         if (name.length === length) {
           return name;
         } else {
           const lastLength = length - name.length;
           for (let i = 0; i < lastLength; i++) {
             result += symbol;
+            if (userSide === "left") {
+              return result + name;
+            }
           }
         }
         return name + result;
